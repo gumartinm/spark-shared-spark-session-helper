@@ -2,11 +2,11 @@ dist: bionic
 
 language: scala
 
-jdk:
-  - oraclejdk8
-
 scala:
   - 2.11.8
+
+before_install:
+  - source ci/java_install.sh
 
 script:
   - sbt -sbt-launch-repo https://repo.scala-sbt.org/scalasbt/maven-releases/ ++$TRAVIS_SCALA_VERSION clean compile scalastyle coverage test test:scalastyle coverageReport

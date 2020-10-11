@@ -1,0 +1,40 @@
+# Scala
+*.class
+*.log
+
+
+# Generated files
+bin/
+gen/
+
+
+# Gradle files
+.gradle/
+build/
+# Ignore Gradle GUI config
+gradle-app.setting
+
+
+# From: https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
+*.iml
+## Directory-based project format:
+.idea/
+## File-based project format:
+*.ipr
+*.iws
+## Plugin-specific files:
+# IntelliJ
+out/
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+
+# Embedded Hive
+spark-warehouse/
+metastore_db/
+
+
+# Maven
+target
+

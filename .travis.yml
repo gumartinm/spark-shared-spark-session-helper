@@ -1,0 +1,19 @@
+dist: bionic
+
+language: scala
+
+jdk:
+  - oraclejdk8
+
+scala:
+  - 2.11.8
+
+script:
+  - sbt -sbt-launch-repo https://repo.scala-sbt.org/scalasbt/maven-releases/ ++$TRAVIS_SCALA_VERSION clean compile scalastyle coverage test test:scalastyle coverageReport
+
+cache:
+  directories:
+    - $HOME/.ivy2/cache
+    - $HOME/.sbt/boot/scala-$TRAVIS_SCALA_VERSION
+    - $HOME/.cache/coursier
+
